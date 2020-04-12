@@ -1,0 +1,15 @@
+language: generic
+
+sudo: required
+
+addons:
+  apt:
+    packages:
+      - docker
+      - docker-compose
+      - git
+
+after_success:
+  git clone https://github.com/ChrIgiSta/signal-messanger-socket.git
+  cd signal-messanger-socket
+  docker-compose up
