@@ -1,5 +1,5 @@
 ## A HTTP Server to send Messages over Signal Messager
-This docker container provides a HTTP Server on Port 16323 to recieve a HTTP Post to send a Message over Signal Messanger using the signal-cli `https://github.com/AsamK/signal-cli.git` from `AsamK`.
+This docker container provides a HTTP Server on Port 16323 to recieve a HTTP Post to send a Message over [Signal Messanger](https://github.com/signalapp) using the [signal-cli](`https://github.com/AsamK/signal-cli.git`) from `AsamK`.
 
 ## How to use
 
