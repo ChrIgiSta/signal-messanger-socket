@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  signal-socket:
+    # build from dockerfile
+    build: .
+    image: signal-messanger-socket:1.0
+
+    # link ports (out:in)
+    ports:
+      - 16323:16323/tcp
+
+    tty: true
+
