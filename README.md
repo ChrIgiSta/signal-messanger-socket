@@ -1,5 +1,5 @@
 ## A HTTP Server to send Messages over Signal Messager
-This docker container provides a HTTP Server on Port 16323 to recieve a HTTP Post to send a Message over Signal Messanger using the signal-cli `https://github.com/AsamK/signal-cli.git` from `AsamK`.
+This docker container provides a HTTP Server on Port 16323 to recieve a HTTP Post to send a Message over [Signal Messanger](https://github.com/signalapp) using the [signal-cli](https://github.com/AsamK/signal-cli.git) from `AsamK`.
 
 ## How to use
 
@@ -9,7 +9,7 @@ This docker container provides a HTTP Server on Port 16323 to recieve a HTTP Pos
 
 ### Register a phone
  * register a number by sending a HTTP Post to `localhost:16323/reg`
- ** e.g. use curl 
+   * e.g. use curl 
 ```[shell]
 curl --header "Content-Type: application/json" \
   --request POST \
@@ -18,7 +18,7 @@ curl --header "Content-Type: application/json" \
 ```
 
  * verify your phone number by sending a HTTP Post to `localhost:16323/verify` with content type `application/json` and content `{"value1":"verificationCodeSendedBySms"}`
- ** e.g. use curl
+   * e.g. use curl
 ```[shell]
 curl --header "Content-Type: application/json" \
   --request POST \
@@ -28,7 +28,7 @@ curl --header "Content-Type: application/json" \
 
 ### Send a Signal Message
  * send a message over signal sending a HTTP Post to `localhost:16323/sms` with content type `application/json` and content `{"value1":"receiptPhoneNumber","value2":"yourMessageText"}`
- ** e.g. use curl
+   * e.g. use curl
 ```[shell]
 curl --header "Content-Type: application/json" \
   --request POST \
